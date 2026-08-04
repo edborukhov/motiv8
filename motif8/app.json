@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Motif 8",
+    "slug": "motif8",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#14120F",
+    "splash": {
+      "backgroundColor": "#14120F"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Motif 8 uses your camera to take your daily progress photo. Photos are stored only on your device."
+      }
+    },
+    "android": {
+      "package": "com.motif8.app",
+      "permissions": ["CAMERA"]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Motif 8 uses your camera to take your daily progress photo. Photos are stored only on your device."
+        }
+      ]
+    ]
+  }
+}
