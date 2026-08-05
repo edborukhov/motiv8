@@ -62,16 +62,16 @@ export default function StreakScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  title: { color: colors.textPrimary, fontSize: 20, fontWeight: "600", marginBottom: spacing.md },
+  title: { color: colors.textPrimary, fontSize: 24, fontWeight: "600", marginBottom: spacing.md },
   statsRow: { flexDirection: "row", gap: spacing.sm, marginBottom: spacing.lg },
   statCard: { flex: 1, backgroundColor: colors.card, borderRadius: radius.md, padding: spacing.md, alignItems: "center" },
-  statValue: { color: colors.textPrimary, fontSize: 20, fontWeight: "600" },
-  statLabel: { color: colors.textMuted, fontSize: 10, marginTop: 2, textAlign: "center" },
+  statValue: { color: colors.textPrimary, fontSize: 24, fontWeight: "600" },
+  statLabel: { color: colors.textMuted, fontSize: 13, marginTop: 2, textAlign: "center" },
   grid: { flexDirection: "row", flexWrap: "wrap", gap: 4 },
   cell: { width: 18, height: 18, borderRadius: 3, backgroundColor: colors.card },
   cellComplete: { backgroundColor: colors.accent },
   cellToday: { borderWidth: 1.5, borderColor: colors.accent, backgroundColor: "transparent" },
   legendRow: { flexDirection: "row", alignItems: "center", marginTop: spacing.md },
   legendDot: { width: 10, height: 10, borderRadius: 2, marginRight: spacing.xs },
-  legendText: { color: colors.textMuted, fontSize: 11 },
+  legendText: { color: colors.textMuted, fontSize: 14 },
 });

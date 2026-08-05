@@ -69,7 +69,7 @@ export default function TodayScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
   header: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: spacing.sm },
-  dayLabel: { color: colors.textSecondary, fontSize: 13 },
-  settingsLink: { color: colors.accent, fontSize: 13 },
+  dayLabel: { color: colors.textSecondary, fontSize: 17 },
+  settingsLink: { color: colors.accent, fontSize: 17 },
   ringWrap: { alignItems: "center", marginVertical: spacing.lg },
 });

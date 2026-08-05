@@ -44,8 +44,8 @@ export default function GalleryScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background, padding: spacing.lg },
-  title: { color: colors.textPrimary, fontSize: 20, fontWeight: "600" },
-  subtitle: { color: colors.textSecondary, fontSize: 12, marginBottom: spacing.md },
+  title: { color: colors.textPrimary, fontSize: 24, fontWeight: "600" },
+  subtitle: { color: colors.textSecondary, fontSize: 16, marginBottom: spacing.md },
   compareButton: {
     backgroundColor: colors.card,
     borderRadius: radius.md,
@@ -53,9 +53,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: spacing.md,
   },
-  compareButtonText: { color: colors.accent, fontSize: 13, fontWeight: "600" },
+  compareButtonText: { color: colors.accent, fontSize: 17, fontWeight: "600" },
   tile: { flex: 1 / 3, aspectRatio: 3 / 4 },
   image: { width: "100%", height: "100%", borderRadius: radius.sm, backgroundColor: colors.card },
-  dayTag: { color: colors.textSecondary, fontSize: 10, position: "absolute", bottom: 4, left: 6 },
-  empty: { color: colors.textMuted, fontSize: 13, marginTop: spacing.xl, textAlign: "center" },
+  dayTag: { color: colors.textSecondary, fontSize: 13, position: "absolute", bottom: 4, left: 6 },
+  empty: { color: colors.textMuted, fontSize: 17, marginTop: spacing.xl, textAlign: "center" },
 });

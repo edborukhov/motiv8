@@ -40,8 +40,8 @@ export default function DietModal({ navigation }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background, padding: spacing.lg },
-  title: { color: colors.textPrimary, fontSize: 20, fontWeight: "600", marginBottom: spacing.xs },
-  subtitle: { color: colors.textSecondary, fontSize: 13, marginBottom: spacing.lg },
+  title: { color: colors.textPrimary, fontSize: 24, fontWeight: "600", marginBottom: spacing.xs },
+  subtitle: { color: colors.textSecondary, fontSize: 17, marginBottom: spacing.lg },
   row: {
     flexDirection: "row",
     alignItems: "center",
@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
     marginRight: spacing.md,
   },
   checkCircleDone: { backgroundColor: colors.accent, borderColor: colors.accent },
-  checkMark: { color: colors.accentText, fontSize: 13, fontWeight: "700" },
-  label: { color: colors.textPrimary, fontSize: 14 },
+  checkMark: { color: colors.accentText, fontSize: 17, fontWeight: "700" },
+  label: { color: colors.textPrimary, fontSize: 18 },
   doneButton: {
     backgroundColor: colors.accent,
     borderRadius: radius.md,
@@ -70,5 +70,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: spacing.lg,
   },
-  doneButtonText: { color: colors.accentText, fontSize: 14, fontWeight: "600" },
+  doneButtonText: { color: colors.accentText, fontSize: 18, fontWeight: "600" },
 });

@@ -41,11 +41,11 @@ export default function CompareScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background, padding: spacing.lg },
-  title: { color: colors.textPrimary, fontSize: 20, fontWeight: "600", marginBottom: spacing.md },
+  title: { color: colors.textPrimary, fontSize: 24, fontWeight: "600", marginBottom: spacing.md },
   row: { flexDirection: "row", gap: spacing.sm },
   image: { flex: 1, aspectRatio: 3 / 4, borderRadius: radius.md, backgroundColor: colors.card },
-  dayLabel: { flex: 1, color: colors.accent, fontSize: 12, textAlign: "center", marginTop: spacing.xs },
-  pickerLabel: { color: colors.textSecondary, fontSize: 12, marginTop: spacing.lg, marginBottom: spacing.sm },
+  dayLabel: { flex: 1, color: colors.accent, fontSize: 16, textAlign: "center", marginTop: spacing.xs },
+  pickerLabel: { color: colors.textSecondary, fontSize: 16, marginTop: spacing.lg, marginBottom: spacing.sm },
   pickerRow: { flexDirection: "row", flexWrap: "wrap", gap: spacing.xs },
   chip: {
     borderWidth: 0.5,
@@ -55,6 +55,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   chipActive: { borderColor: colors.accent },
-  chipText: { color: colors.textSecondary, fontSize: 12 },
-  hint: { color: colors.textMuted, fontSize: 11, marginTop: spacing.md },
+  chipText: { color: colors.textSecondary, fontSize: 16 },
+  hint: { color: colors.textMuted, fontSize: 14, marginTop: spacing.md },
 });

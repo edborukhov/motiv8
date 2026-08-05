@@ -25,8 +25,8 @@ export default function DayCompleteScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background, alignItems: "center", justifyContent: "center", padding: spacing.xl },
-  title: { color: colors.textPrimary, fontSize: 16, fontWeight: "600", marginTop: spacing.lg },
-  subtitle: { color: colors.textSecondary, fontSize: 13, marginTop: spacing.xs, marginBottom: spacing.xl },
+  title: { color: colors.textPrimary, fontSize: 20, fontWeight: "600", marginTop: spacing.lg },
+  subtitle: { color: colors.textSecondary, fontSize: 17, marginTop: spacing.xs, marginBottom: spacing.xl },
   button: {
     width: "100%",
     borderWidth: 0.5,
@@ -35,5 +35,5 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     alignItems: "center",
   },
-  buttonText: { color: colors.textSecondary, fontSize: 14 },
+  buttonText: { color: colors.textSecondary, fontSize: 18 },
 });

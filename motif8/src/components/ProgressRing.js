@@ -46,6 +46,6 @@ export default function ProgressRing({ completed, total, size = 120, strokeWidth
 
 const styles = StyleSheet.create({
   center: { flex: 1, alignItems: "center", justifyContent: "center" },
-  count: { color: colors.textPrimary, fontSize: 20, fontWeight: "600" },
-  subtitle: { color: colors.textSecondary, fontSize: 11, marginTop: 2 },
+  count: { color: colors.textPrimary, fontSize: 24, fontWeight: "600" },
+  subtitle: { color: colors.textSecondary, fontSize: 14, marginTop: 2 },
 });

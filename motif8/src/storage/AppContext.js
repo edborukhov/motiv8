@@ -249,6 +249,16 @@ export function AppDataProvider({ children }) {
     [state, persist]
   );
 
+  // DEBUG ONLY: wipes all local data and starts a brand new Day 1, as if
+  // the app were freshly installed. Does not delete saved photo files from
+  // disk, just clears the app's reference to them.
+  const resetAllData = useCallback(async () => {
+    const fresh = defaultState();
+    fresh.lastOpenedDate = todayString();
+    await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(fresh));
+    setState(fresh);
+  }, []);
+
   const value = {
     ready,
     state,
@@ -260,6 +270,7 @@ export function AppDataProvider({ children }) {
     acknowledgeFailureAndRestart,
     startNewCycle,
     setReminder,
+    resetAllData,
   };
 
   return <AppDataContext.Provider value={value}>{children}</AppDataContext.Provider>;

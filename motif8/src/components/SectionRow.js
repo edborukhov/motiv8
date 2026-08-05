@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     marginRight: spacing.md,
   },
   checkCircleDone: { backgroundColor: colors.accent, borderColor: colors.accent },
-  checkMark: { color: colors.accentText, fontSize: 13, fontWeight: "700" },
-  label: { color: colors.textPrimary, fontSize: 14, flexShrink: 0 },
-  subtitle: { color: colors.textMuted, fontSize: 12, marginLeft: "auto" },
+  checkMark: { color: colors.accentText, fontSize: 17, fontWeight: "700" },
+  label: { color: colors.textPrimary, fontSize: 18, flexShrink: 0 },
+  subtitle: { color: colors.textMuted, fontSize: 16, marginLeft: "auto" },
 });

@@ -5,9 +5,12 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
-    "backgroundColor": "#14120F",
+    "icon": "./assets/icon.png",
+    "backgroundColor": "#12151F",
     "splash": {
-      "backgroundColor": "#14120F"
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#12151F"
     },
     "ios": {
       "supportsTablet": false,
@@ -17,9 +20,14 @@
     },
     "android": {
       "package": "com.motif8.app",
-      "permissions": [
-        "CAMERA"
-      ]
+      "permissions": ["CAMERA"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#12151F"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       [

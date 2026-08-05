@@ -51,9 +51,9 @@ export default function NotesScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background, padding: spacing.lg },
-  title: { color: colors.textPrimary, fontSize: 20, fontWeight: "600", marginBottom: spacing.md },
+  title: { color: colors.textPrimary, fontSize: 24, fontWeight: "600", marginBottom: spacing.md },
   inputCard: { backgroundColor: colors.card, borderRadius: radius.lg, padding: spacing.md, marginBottom: spacing.lg },
-  input: { minHeight: 70, color: colors.textPrimary, fontSize: 14, textAlignVertical: "top" },
+  input: { minHeight: 70, color: colors.textPrimary, fontSize: 18, textAlignVertical: "top" },
   saveButton: {
     alignSelf: "flex-end",
     backgroundColor: colors.accent,
@@ -62,10 +62,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     marginTop: spacing.sm,
   },
-  saveButtonText: { color: colors.accentText, fontSize: 13, fontWeight: "600" },
-  pastLabel: { color: colors.textSecondary, fontSize: 12, marginBottom: spacing.sm },
+  saveButtonText: { color: colors.accentText, fontSize: 17, fontWeight: "600" },
+  pastLabel: { color: colors.textSecondary, fontSize: 16, marginBottom: spacing.sm },
   noteRow: { backgroundColor: colors.card, borderRadius: radius.md, padding: spacing.md, marginBottom: spacing.sm },
-  noteDay: { color: colors.textMuted, fontSize: 11 },
-  noteText: { color: colors.textPrimary, fontSize: 13, marginTop: spacing.xs },
-  empty: { color: colors.textMuted, fontSize: 13, marginTop: spacing.lg, textAlign: "center" },
+  noteDay: { color: colors.textMuted, fontSize: 14 },
+  noteText: { color: colors.textPrimary, fontSize: 17, marginTop: spacing.xs },
+  empty: { color: colors.textMuted, fontSize: 17, marginTop: spacing.lg, textAlign: "center" },
 });

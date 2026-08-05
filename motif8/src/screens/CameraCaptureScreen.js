@@ -94,8 +94,8 @@ export default function CameraCaptureScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background, padding: spacing.lg },
   preview: { width: "100%", aspectRatio: 3 / 4, borderRadius: radius.md, backgroundColor: colors.card, marginBottom: spacing.lg },
-  title: { color: colors.textPrimary, fontSize: 20, fontWeight: "600", marginBottom: spacing.xs },
-  subtitle: { color: colors.textSecondary, fontSize: 13, marginBottom: spacing.xl },
+  title: { color: colors.textPrimary, fontSize: 24, fontWeight: "600", marginBottom: spacing.xs },
+  subtitle: { color: colors.textSecondary, fontSize: 17, marginBottom: spacing.xl },
   button: {
     backgroundColor: colors.accent,
     borderRadius: radius.md,
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: spacing.md,
   },
-  buttonText: { color: colors.accentText, fontSize: 14, fontWeight: "600" },
+  buttonText: { color: colors.accentText, fontSize: 18, fontWeight: "600" },
   cancel: { alignItems: "center", paddingVertical: 12 },
-  cancelText: { color: colors.textSecondary, fontSize: 14 },
+  cancelText: { color: colors.textSecondary, fontSize: 18 },
 });

@@ -53,9 +53,9 @@ export default function Day90Screen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.background },
-  trophy: { fontSize: 40, marginBottom: spacing.sm },
-  title: { color: colors.textPrimary, fontSize: 20, fontWeight: "600" },
-  subtitle: { color: colors.textSecondary, fontSize: 13, marginBottom: spacing.lg },
+  trophy: { fontSize: 46, marginBottom: spacing.sm },
+  title: { color: colors.textPrimary, fontSize: 24, fontWeight: "600" },
+  subtitle: { color: colors.textSecondary, fontSize: 17, marginBottom: spacing.lg },
   statsGrid: { flexDirection: "row", flexWrap: "wrap", gap: spacing.sm, width: "100%", marginBottom: spacing.lg },
   statCard: {
     width: "47%",
@@ -64,8 +64,8 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     alignItems: "center",
   },
-  statValue: { color: colors.accent, fontSize: 20, fontWeight: "600" },
-  statLabel: { color: colors.textMuted, fontSize: 10, marginTop: 2, textAlign: "center" },
+  statValue: { color: colors.accent, fontSize: 24, fontWeight: "600" },
+  statLabel: { color: colors.textMuted, fontSize: 13, marginTop: 2, textAlign: "center" },
   primaryButton: {
     width: "100%",
     backgroundColor: colors.accent,
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: spacing.sm,
   },
-  primaryButtonText: { color: colors.accentText, fontSize: 14, fontWeight: "600" },
+  primaryButtonText: { color: colors.accentText, fontSize: 18, fontWeight: "600" },
   secondaryButton: {
     width: "100%",
     borderWidth: 0.5,
@@ -83,5 +83,5 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     alignItems: "center",
   },
-  secondaryButtonText: { color: colors.textSecondary, fontSize: 14 },
+  secondaryButtonText: { color: colors.textSecondary, fontSize: 18 },
 });
