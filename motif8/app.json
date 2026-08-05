@@ -17,7 +17,9 @@
     },
     "android": {
       "package": "com.motif8.app",
-      "permissions": ["CAMERA"]
+      "permissions": [
+        "CAMERA"
+      ]
     },
     "plugins": [
       [

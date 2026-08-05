@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useAppData } from "../storage/AppContext";
 import ProgressRing from "../components/ProgressRing";
 import SectionRow from "../components/SectionRow";
@@ -8,6 +9,18 @@ import { colors, spacing } from "../theme";
 
 export default function TodayScreen({ navigation }) {
   const { state, toggleSection, closeOutDay } = useAppData();
+
+  React.useEffect(() => {
+    if (!state) return;
+    const allDone = Object.values(state.sections).every(Boolean);
+    if (allDone && !state.dayLocked) {
+      closeOutDay().then(({ isDay90 }) => {
+        navigation.navigate(isDay90 ? "Day90" : "DayComplete");
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state && state.sections]);
+
   if (!state) return null;
 
   const completed = Object.values(state.sections).filter(Boolean).length;
@@ -24,40 +37,32 @@ export default function TodayScreen({ navigation }) {
     toggleSection(key);
   }
 
-  React.useEffect(() => {
-    const allDone = Object.values(state.sections).every(Boolean);
-    if (allDone && !state.dayLocked) {
-      closeOutDay().then(({ isDay90 }) => {
-        navigation.navigate(isDay90 ? "Day90" : "DayComplete");
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.sections]);
-
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ padding: spacing.lg }}>
-      <View style={styles.header}>
-        <Text style={styles.dayLabel}>Day {state.currentDay} of {TRANSFORMATION_LENGTH}</Text>
-        <TouchableOpacity onPress={() => navigation.navigate("Reminders")}>
-          <Text style={styles.settingsLink}>Reminders</Text>
-        </TouchableOpacity>
-      </View>
+    <SafeAreaView style={styles.container} edges={["top"]}>
+      <ScrollView contentContainerStyle={{ padding: spacing.lg }}>
+        <View style={styles.header}>
+          <Text style={styles.dayLabel}>Day {state.currentDay} of {TRANSFORMATION_LENGTH}</Text>
+          <TouchableOpacity onPress={() => navigation.navigate("Reminders")}>
+            <Text style={styles.settingsLink}>Reminders</Text>
+          </TouchableOpacity>
+        </View>
 
-      <View style={styles.ringWrap}>
-        <ProgressRing completed={completed} total={SECTIONS.length} subtitle="complete" />
-      </View>
+        <View style={styles.ringWrap}>
+          <ProgressRing completed={completed} total={SECTIONS.length} subtitle="complete" />
+        </View>
 
-      {SECTIONS.map((sec) => (
-        <SectionRow
-          key={sec.key}
-          label={sec.label}
-          subtitle={sec.subtitle}
-          done={state.sections[sec.key]}
-          disabled={state.dayLocked}
-          onPress={() => handleToggle(sec.key)}
-        />
-      ))}
-    </ScrollView>
+        {SECTIONS.map((sec) => (
+          <SectionRow
+            key={sec.key}
+            label={sec.label}
+            subtitle={sec.subtitle}
+            done={state.sections[sec.key]}
+            disabled={state.dayLocked}
+            onPress={() => handleToggle(sec.key)}
+          />
+        ))}
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 

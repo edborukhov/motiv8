@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useAppData } from "../storage/AppContext";
 import { colors, radius, spacing } from "../theme";
 
@@ -14,7 +15,8 @@ export default function Day90Screen({ navigation }) {
   }
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ padding: spacing.xl, alignItems: "center" }}>
+    <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
+    <ScrollView contentContainerStyle={{ padding: spacing.xl, alignItems: "center" }}>
       <Text style={styles.trophy}>🏆</Text>
       <Text style={styles.title}>90 days done.</Text>
       <Text style={styles.subtitle}>You showed up, no excuses.</Text>
@@ -45,6 +47,7 @@ export default function Day90Screen({ navigation }) {
         <Text style={styles.secondaryButtonText}>View full comparison</Text>
       </TouchableOpacity>
     </ScrollView>
+    </SafeAreaView>
   );
 }
 

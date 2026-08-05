@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useAppData } from "../storage/AppContext";
 import ProgressRing from "../components/ProgressRing";
 import { SECTIONS } from "../constants/sections";
@@ -10,7 +11,7 @@ export default function DayCompleteScreen({ navigation }) {
   if (!state) return null;
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
       <ProgressRing completed={SECTIONS.length} total={SECTIONS.length} size={120} />
       <Text style={styles.title}>Day {state.currentDay} complete</Text>
       <Text style={styles.subtitle}>{SECTIONS.length}/{SECTIONS.length} sections closed</Text>
@@ -18,7 +19,7 @@ export default function DayCompleteScreen({ navigation }) {
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Tabs")}>
         <Text style={styles.buttonText}>Back to today</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 

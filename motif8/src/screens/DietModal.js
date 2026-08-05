@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useAppData } from "../storage/AppContext";
 import { DIET_ITEMS } from "../constants/sections";
 import { colors, radius, spacing } from "../theme";
@@ -9,7 +10,7 @@ export default function DietModal({ navigation }) {
   if (!state) return null;
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top"]}>
       <Text style={styles.title}>Diet</Text>
       <Text style={styles.subtitle}>Log at least one to mark today's diet done.</Text>
 
@@ -33,12 +34,12 @@ export default function DietModal({ navigation }) {
       <TouchableOpacity style={styles.doneButton} onPress={() => navigation.goBack()}>
         <Text style={styles.doneButtonText}>Done</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.background, padding: spacing.lg, paddingTop: spacing.xl * 2 },
+  container: { flex: 1, backgroundColor: colors.background, padding: spacing.lg },
   title: { color: colors.textPrimary, fontSize: 20, fontWeight: "600", marginBottom: spacing.xs },
   subtitle: { color: colors.textSecondary, fontSize: 13, marginBottom: spacing.lg },
   row: {

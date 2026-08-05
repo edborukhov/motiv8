@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useAppData } from "../storage/AppContext";
 import { colors, radius, spacing } from "../theme";
 
@@ -10,7 +11,7 @@ export default function GalleryScreen({ navigation }) {
   const photos = [...state.photos].sort((a, b) => a.day - b.day);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top"]}>
       <Text style={styles.title}>Progress</Text>
       <Text style={styles.subtitle}>{photos.length} photos since day 1</Text>
 
@@ -37,7 +38,7 @@ export default function GalleryScreen({ navigation }) {
         )}
         ListEmptyComponent={<Text style={styles.empty}>No photos yet. Take today's photo from the checklist.</Text>}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useAppData } from "../storage/AppContext";
 import { colors, radius, spacing } from "../theme";
 
@@ -15,7 +16,7 @@ export default function NotesScreen() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top"]}>
       <Text style={styles.title}>Notes</Text>
 
       <View style={styles.inputCard}>
@@ -44,7 +45,7 @@ export default function NotesScreen() {
         )}
         ListEmptyComponent={<Text style={styles.empty}>No notes yet.</Text>}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 

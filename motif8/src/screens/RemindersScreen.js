@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Switch, TextInput, ScrollView, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useAppData } from "../storage/AppContext";
 import { SECTIONS } from "../constants/sections";
 import { colors, radius, spacing } from "../theme";
@@ -9,7 +10,8 @@ export default function RemindersScreen() {
   if (!state) return null;
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ padding: spacing.lg }}>
+    <SafeAreaView style={styles.container} edges={["top"]}>
+    <ScrollView contentContainerStyle={{ padding: spacing.lg }}>
       <Text style={styles.title}>Reminders</Text>
       <Text style={styles.subtitle}>Set a nudge time for each section</Text>
 
@@ -43,6 +45,7 @@ export default function RemindersScreen() {
         scheduling is wired up in notifications.js once you're testing on a real device.
       </Text>
     </ScrollView>
+    </SafeAreaView>
   );
 }
 

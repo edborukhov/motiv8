@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useAppData } from "../storage/AppContext";
 import { TRANSFORMATION_LENGTH } from "../constants/sections";
 import { colors, radius, spacing } from "../theme";
@@ -16,7 +17,8 @@ export default function StreakScreen() {
   }
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={{ padding: spacing.lg }}>
+    <SafeAreaView style={styles.container} edges={["top"]}>
+    <ScrollView contentContainerStyle={{ padding: spacing.lg }}>
       <Text style={styles.title}>Streak</Text>
 
       <View style={styles.statsRow}>
@@ -54,6 +56,7 @@ export default function StreakScreen() {
         <Text style={styles.legendText}>complete</Text>
       </View>
     </ScrollView>
+    </SafeAreaView>
   );
 }
 

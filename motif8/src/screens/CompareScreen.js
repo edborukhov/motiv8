@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { colors, radius, spacing } from "../theme";
 
 export default function CompareScreen({ route }) {
@@ -8,7 +9,7 @@ export default function CompareScreen({ route }) {
   const [rightIndex, setRightIndex] = useState(photos.length - 1);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top"]}>
       <Text style={styles.title}>Compare</Text>
 
       <View style={styles.row}>
@@ -34,7 +35,7 @@ export default function CompareScreen({ route }) {
         ))}
       </View>
       <Text style={styles.hint}>Tap to set the right photo, hold to set the left photo.</Text>
-    </View>
+    </SafeAreaView>
   );
 }
 

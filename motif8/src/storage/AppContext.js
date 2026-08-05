@@ -195,7 +195,13 @@ export function AppDataProvider({ children }) {
         { day: state.currentDay, date: todayString(), completed: true, sectionsSnapshot: state.sections },
       ];
       const stats = buildDay90Stats({ ...state, history: historyWithToday });
-      const next = { ...state, dayLocked: true, history: historyWithToday, pendingDay90: stats };
+      const next = {
+        ...state,
+        dayLocked: true,
+        history: historyWithToday,
+        pendingDay90: stats,
+        bestStreak: Math.max(state.bestStreak, TRANSFORMATION_LENGTH),
+      };
       await persist(next);
       return { isDay90: true };
     }

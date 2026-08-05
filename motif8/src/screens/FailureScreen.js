@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useAppData } from "../storage/AppContext";
 import { colors, radius, spacing } from "../theme";
 
@@ -14,7 +15,7 @@ export default function FailureScreen({ navigation }) {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
       <View style={styles.banner}>
         <Text style={styles.bannerTitle}>No excuses.</Text>
         <Text style={styles.bannerSubtitle}>Day {day} failed. Day 1 starts now.</Text>
@@ -36,7 +37,7 @@ export default function FailureScreen({ navigation }) {
         <Text style={styles.buttonText}>Start day 1 again</Text>
       </TouchableOpacity>
       <Text style={styles.bestRun}>{Math.max(day - 1, 0)} days was your best run yet</Text>
-    </View>
+    </SafeAreaView>
   );
 }
 
